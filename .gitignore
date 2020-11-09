@@ -5,9 +5,9 @@ from scipy.optimize import fsolve
 
 def equations(p):
     X, Y, Z = p
-    y1 = X-Y**2 +3                  # parabola
-    y2 = X+Y+1                      # reta
-    y3 = X**2+Y**2-5                # circulo raio raiz(5)  x**2+y**2=5 onde y4=0
+    y1 = X-Y**2 +3                  # parabolic
+    y2 = X+Y+1                      # line
+    y3 = X**2+Y**2-5                # radius circle: sqrt(5)  x**2+y**2=5 where y4=0
     return (y1,y2,y3)
 
 X, Y, Z =  fsolve(equations, (-3, 2, 0))
@@ -18,11 +18,11 @@ print(np. around((X,Y),2))
 x = np.arange(-5,5,0.001) 
 y = np.arange(-5, 5, 0.05)
 
-X,Y = np.meshgrid(x,y)          # para desenhar o círculo
+X,Y = np.meshgrid(x,y)          # to draw the circle
 
-y1 = X-Y**2 +3                  # parabola
-y2 = X+Y+1                      # reta
-y3 = X**2+Y**2-5                # circulo raio raiz(5)  x**2+y**2=5 onde y4=0
+y1 = X-Y**2 +3                  # parabolic
+y2 = X+Y+1                      # line
+y3 = X**2+Y**2-5                # radius circle: sqrt(5)  x**2+y**2=5 where y4=0
        
 fig, ax = plt.subplots()
 
